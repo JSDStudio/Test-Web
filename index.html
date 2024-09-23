@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Meta tags for character set, compatibility, responsiveness, and SEO.
+        Title of the website.
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menswear Designer Portfolio</title>
+    <meta name="description" content="Portfolio website showcasing the menswear designs of [Your Name], including seasonal collections and other projects.">
+
+    <!-- Open Graph Meta Tags for better social media integration -->
+    <meta property="og:title" content="Menswear Designer Portfolio">
+    <meta property="og:description" content="Explore the latest collections and projects by [Your Name], a passionate menswear designer.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "[Your Name]",
+      "jobTitle": "Menswear Designer",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://instagram.com/yourprofile",
+        "https://linkedin.com/in/yourprofile"
+      ]
+    }
+    </script>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Link to Favicon -->
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Link to Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome for Icons (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- 
+        Skip Navigation Link for accessibility.
+    -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- 
+        Header section containing the navigation menu.
+    -->
+    <header>
+        <nav role="navigation">
+            <!-- 
+                Hamburger menu button for mobile devices.
+            -->
+            <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                &#9776;
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- 
+                    Social Media Links (Optional)
+                -->
+                <li class="social-media">
+                    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+        Main content of the website.
+    -->
+    <main id="main-content">
+        <!-- 
+            Home section with a welcoming message and background image.
+        -->
+        <section id="home">
+            <h1>Welcome to My Menswear Design Portfolio</h1>
+            <p>Explore my collections and projects that showcase my passion for men's fashion.</p>
+        </section>
+
+        <!-- 
+            About Me section to introduce yourself.
+        -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/about/profile.jpg" alt="[Your Name] - Menswear Designer" loading="lazy">
+                <div class="about-text">
+                    <p>Hello! I'm [Your Name], a passionate menswear designer dedicated to creating stylish and contemporary clothing that empowers men to express their individuality. With a keen eye for detail and a commitment to quality, I strive to bring innovative designs to life, blending classic aesthetics with modern trends.</p>
+                    <p>My journey in fashion design began [briefly describe your background or inspiration]. Over the years, I've honed my skills in [mention any specific areas or techniques], allowing me to deliver exceptional pieces that resonate with my clients and stand out in the fashion industry.</p>
+                    <p>Thank you for visiting my portfolio. I invite you to explore my collections and projects to see the creativity and dedication I bring to every design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Collections section showcasing previous seasonal collections.
+        -->
+        <section id="collections">
+            <h2>Previous Seasonal Collections</h2>
+            <div class="collection-gallery">
+                <!-- 
+                    Collection 1: SS23 Blood Sweat & Tears
+                -->
+                <div class="collection-item">
+                    <img src="images/collections/ss23-blood-sweat-tears.jpg" alt="SS23 Blood Sweat & Tears Collection" loading="lazy">
+                    <h3>SS23 Blood Sweat & Tears</h3>
+                    <p>A collection inspired by raw emotions and strength.</p>
+                </div>
+                <!-- 
+                    Collection 2: FW23 Silver Linings
+                -->
+                <div class="collection-item">
+                    <img src="images/collections/fw23-silver-linings.jpg" alt="FW23 Silver Linings Collection" loading="lazy">
+                    <h3>FW23 Silver Linings</h3>
+                    <p>Elegant designs with a touch of modern sophistication.</p>
+                </div>
+                <!-- 
+                    Collection 3: SS24 Tales & Tropes
+                -->
+                <div class="collection-item">
+                    <img src="images/collections/ss24-tales-tropes.jpg" alt="SS24 Tales & Tropes Collection" loading="lazy">
+                    <h3>SS24 Tales & Tropes</h3>
+                    <p>Narrative-driven pieces blending classic and contemporary styles.</p>
+                </div>
+                <!-- 
+                    Collection 4: FW24 Trampled Flowers
+                -->
+                <div class="collection-item">
+                    <img src="images/collections/fw24-trampled-flowers.jpg" alt="FW24 Trampled Flowers Collection" loading="lazy">
+                    <h3>FW24 Trampled Flowers</h3>
+                    <p>A bold collection that juxtaposes beauty and grit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Projects section showcasing additional work.
+        -->
+        <section id="projects">
+            <h2>Other Projects</h2>
+            <div class="projects-gallery">
+                <!-- 
+                    Example Project 1
+                -->
+                <div class="project-item">
+                    <img src="images/projects/project1.jpg" alt="Project 1" loading="lazy">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of Project 1.</p>
+                </div>
+                <!-- 
+                    Add more project items as needed
+                -->
+            </div>
+        </section>
+
+        <!-- 
+            Contact section with a contact form and contact information.
+        -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out through the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>Phone: +123-456-7890</li>
+                <li>Instagram: <a href="https://instagram.com/yourprofile" target="_blank">@yourprofile</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></li>
+            </ul>
+
+            <!-- 
+                Contact Form (Optional)
+            -->
+            <form action="submit-form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <!-- reCAPTCHA Widget (If Implemented) -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 
+        Footer section with copyright.
+    -->
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- 
+        Link to external JavaScript file for interactivity.
+    -->
+    <script src="scripts/main.js"></script>
+    <!-- 
+        Google reCAPTCHA Script (If Implemented)
+    -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
+

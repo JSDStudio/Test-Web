@@ -1,0 +1,407 @@
+/* 
+    CSS Variables for easy theming and maintenance.
+*/
+:root {
+  --primary-color: #333;
+  --secondary-color: #fff;
+  --accent-color: #f4f4f4;
+  --font-family: 'Roboto', sans-serif;
+  --padding: 20px;
+  --transition-speed: 0.3s;
+  --max-width: 1200px;
+  --accent-hover-color: #ffd700; /* Gold color for hover effects */
+}
+
+/* 
+  General Styles for the entire website.
+*/
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* 
+  Skip Navigation Link Styles.
+*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 
+  Header and Navigation Styles.
+*/
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#nav-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: var(--accent-hover-color);
+  text-decoration: underline;
+}
+
+/* 
+  Social Media Links Styles (Optional)
+*/
+nav ul li.social-media a {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+nav ul li.social-media a:hover,
+nav ul li.social-media a:focus {
+  color: var(--accent-hover-color);
+}
+
+/* 
+  Main Content Styles.
+*/
+main {
+  padding: var(--padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+section {
+  padding: var(--padding);
+  margin: var(--padding) 0;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+  Home Section Styles.
+*/
+#home {
+  text-align: center;
+  background-image: url('images/backgrounds/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--secondary-color);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+/* 
+  About Me Section Styles.
+*/
+#about {
+  background-color: var(--secondary-color);
+  padding: var(--padding);
+  margin: var(--padding) 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-content img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-content img {
+      width: 200px;
+  }
+
+  .about-text {
+      min-width: 0;
+  }
+}
+
+/* 
+  Collections Gallery Styles.
+*/
+.collection-gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.collection-item {
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.collection-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collection-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.collection-item h3 {
+  margin-top: 10px;
+}
+
+.collection-item p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+/* 
+  Projects Gallery Styles.
+*/
+.projects-gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-item {
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-item h3 {
+  margin-top: 10px;
+}
+
+.project-item p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+/* 
+  Contact Section Styles.
+*/
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact ul li {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: var(--accent-hover-color);
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-family);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+button:hover,
+button:focus {
+  background-color: #555;
+}
+
+/* 
+  Footer Styles.
+*/
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: var(--padding);
+}
+
+/* 
+  Responsive Design for Tablets and Mobile Devices.
+*/
+@media (max-width: 768px) {
+  .collection-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .projects-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  #home {
+      height: 40vh;
+  }
+
+  /* 
+      Display the hamburger menu button on small screens.
+  */
+  #nav-toggle {
+      display: block;
+  }
+
+  /* 
+      Hide the navigation menu by default on small screens.
+  */
+  #nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* 
+      Show the navigation menu when active.
+  */
+  #nav-menu.active {
+      display: flex;
+  }
+}
