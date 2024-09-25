@@ -8,25 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars(trim($_POST['message']));
 
-    // Verify reCAPTCHA response (if implemented)
-    $secret = 'YOUR_SECRET_KEY'; // Replace with your actual secret key
-    $response = $_POST['g-recaptcha-response'];
-    $remoteip = $_SERVER['REMOTE_ADDR'];
-
-    // Make a POST request to the Google reCAPTCHA server
-    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptcha_response = file_get_contents($recaptcha_url . '?secret=' . $secret . '&response=' . $response . '&remoteip=' . $remoteip);
-    $recaptcha_data = json_decode($recaptcha_response);
-
-    if ($recaptcha_data->success == false) {
-        // CAPTCHA failed
-        http_response_code(400);
-        echo "CAPTCHA verification failed. Please try again.";
-        exit;
-    }
-
     // Check that data was sent to the mailer
-    if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set a 400 (bad request) response code and exit
         http_response_code(400);
         echo "Please complete the form and try again.";
@@ -34,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Recipient email address
-    $recipient = "your.email@example.com"; // Replace with your actual email address
+    $recipient = "jacksondallas2002@gmail.com"; // Updated email address
 
     // Email subject
     $subject = "New contact from $name";
