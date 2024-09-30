@@ -11,10 +11,13 @@ const urlsToCache = [
     '/images/collections/ss24-tales-tropes.jpg',
     '/images/collections/fw24-trampled-flowers.jpg',
     '/images/projects/project1.jpg',
-    '/images/backgrounds/home-background.jpg',
+    '/images/backgrounds/background.jpg',
     '/images/about/profile.jpg',
     '/images/icons/favicon.ico',
     '/images/og-image.jpg',
+    '/x.html', /* Ensure x.html is cached */
+    '/service-worker.js',
+    '/manifest.json',
     // Add other assets as needed
 ];
 

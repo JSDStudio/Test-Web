@@ -1,4 +1,6 @@
-/* 
+/* styles/styles.css */
+
+/*
     Font Face Declarations for Source Sans Pro
 */
 
@@ -59,7 +61,8 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* 
+
+/*
     CSS Variables for easy theming and maintenance.
 */
 :root {
@@ -71,9 +74,11 @@
   --transition-speed: 0.3s;
   --max-width: 1200px;
   --accent-hover-color: #ffd700; /* Gold color for hover effects */
+  --overlay-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
 }
 
-/* 
+
+/*
     General Styles for the entire website.
 */
 html {
@@ -85,14 +90,38 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: var(--accent-color);
   color: var(--primary-color);
+
+  /* Background Image */
+  background-image: url('images/backgrounds/background.jpg'); /* Corrected Path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  /* Overlay to ensure readability */
+  position: relative;
+  z-index: 0;
+
   /* Custom Scrollbar for Firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) var(--accent-color);
 }
 
-/* 
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  z-index: -1; /* Behind all content */
+}
+
+
+/*
     Custom Scrollbar Styles
 */
 /* For WebKit browsers (Chrome, Safari, Edge) */
@@ -114,7 +143,8 @@ body {
   background-image: linear-gradient(to top, var(--primary-color), var(--accent-color)); /* Reverse gradient on hover */
 }
 
-/* 
+
+/*
     Skip Navigation Link Styles.
 */
 .skip-link {
@@ -132,11 +162,12 @@ body {
   top: 0;
 }
 
-/* 
+
+/*
     Header and Navigation Styles.
 */
 header {
-  background-color: var(--primary-color);
+  background-color: rgba(51, 51, 51, 0.81); /* Slight transparency to blend with background */
   color: var(--secondary-color);
   padding: 10px 0;
   position: sticky;
@@ -187,7 +218,8 @@ nav ul li a:focus {
   text-decoration: underline;
 }
 
-/* 
+
+/*
     Social Media Links Styles (Optional)
 */
 nav ul li.social-media a {
@@ -200,7 +232,8 @@ nav ul li.social-media a:focus {
   color: var(--accent-hover-color);
 }
 
-/* 
+
+/*
     Main Content Styles.
 */
 main {
@@ -212,7 +245,7 @@ main {
 section {
   padding: var(--padding);
   margin: var(--padding) 0;
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.65); /* Semi-transparent to blend with background */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   opacity: 0; /* Initially hidden */
@@ -230,16 +263,18 @@ section.visible {
 #about h2,
 #collections h2,
 #projects h2,
-#contact h2 {
+#contact h2,
+#x-page h1 {
   text-align: center;
 }
 
-/* 
+
+/*
     Home Section Styles.
 */
 #home {
   text-align: center;
-  background-image: url('images/backgrounds/home-background.jpg');
+  /* Removed background-image to use the body's background */
   background-size: cover;
   background-position: center;
   color: var(--secondary-color);
@@ -249,6 +284,7 @@ section.visible {
   justify-content: center;
   opacity: 1; /* Ensure the home section is visible */
   transform: none;
+  background-color: rgba(0, 0, 0, 0.4); /* Added a semi-transparent background for readability */
 }
 
 #home h1 {
@@ -262,11 +298,12 @@ section.visible {
   font-weight: 300;
 }
 
-/* 
+
+/*
     About Me Section Styles.
 */
 #about {
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: var(--padding);
   margin: var(--padding) 0;
   border-radius: 5px;
@@ -318,7 +355,8 @@ section.visible {
   }
 }
 
-/* 
+
+/*
     Collections Gallery Styles.
 */
 .collection-gallery {
@@ -357,7 +395,8 @@ section.visible {
   font-weight: 300;
 }
 
-/* 
+
+/*
     Projects Gallery Styles.
 */
 .projects-gallery {
@@ -396,7 +435,8 @@ section.visible {
   font-weight: 300;
 }
 
-/* 
+
+/*
     Contact Section Styles.
 */
 #contact ul {
@@ -461,11 +501,12 @@ button:focus {
   background-color: #555;
 }
 
-/* 
+
+/*
     Footer Styles.
 */
 footer {
-  background-color: var(--primary-color);
+  background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
   color: var(--secondary-color);
   text-align: center;
   padding: 10px 0;
@@ -474,7 +515,8 @@ footer {
   font-weight: 300;
 }
 
-/* 
+
+/*
     Responsive Design for Tablets and Mobile Devices.
 */
 @media (max-width: 768px) {
@@ -501,14 +543,14 @@ footer {
     height: 40vh;
   }
 
-  /* 
+  /*
     Display the hamburger menu button on small screens.
   */
   #nav-toggle {
     display: block;
   }
 
-  /* 
+  /*
     Hide the navigation menu by default on small screens.
   */
   nav ul {
@@ -517,7 +559,7 @@ footer {
     align-items: center;
   }
 
-  /* 
+  /*
     Show the navigation menu when active.
   */
   nav ul.active {
