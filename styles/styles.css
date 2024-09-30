@@ -215,7 +215,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
   color: var(--accent-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -436,16 +436,15 @@ section.visible {
 }
 
 
-/*
-    Contact Section Styles.
-*/
+/*Contact Section Styles.*/
+
 #contact ul {
   list-style: none;
   padding: 0;
 }
 
 #contact ul li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 #contact a {
@@ -457,7 +456,7 @@ section.visible {
 #contact a:hover,
 #contact a:focus {
   color: var(--accent-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 form {
