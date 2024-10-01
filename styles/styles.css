@@ -1,5 +1,3 @@
-/* styles/styles.css */
-
 /*
     Font Face Declarations for Source Sans Pro
 */
@@ -12,38 +10,7 @@
   src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2') format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2') format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2') format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2') format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2') format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
+
 /* latin-ext */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -52,6 +19,7 @@
   src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2') format('woff2');
   unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -60,7 +28,6 @@
   src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 
 /*
     CSS Variables for easy theming and maintenance.
@@ -77,7 +44,6 @@
   --overlay-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
 }
 
-
 /*
     General Styles for the entire website.
 */
@@ -93,7 +59,7 @@ body {
   color: var(--primary-color);
 
   /* Background Image */
-  background-image: url('images/backgrounds/background.jpg'); /* Corrected Path */
+  background-image: url('images/backgrounds/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -120,7 +86,6 @@ body::before {
   z-index: -1; /* Behind all content */
 }
 
-
 /*
     Custom Scrollbar Styles
 */
@@ -143,10 +108,7 @@ body::before {
   background-image: linear-gradient(to top, var(--primary-color), var(--accent-color)); /* Reverse gradient on hover */
 }
 
-
-/*
-    Skip Navigation Link Styles.
-*/
+/* Skip Navigation Link Styles */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -162,10 +124,7 @@ body::before {
   top: 0;
 }
 
-
-/*
-    Header and Navigation Styles.
-*/
+/* Header and Navigation Styles */
 header {
   background-color: rgba(51, 51, 51, 0.81); /* Slight transparency to blend with background */
   color: var(--secondary-color);
@@ -177,8 +136,8 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: center; /* Aligning all items to the middle x-axis */
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 20px;
@@ -197,6 +156,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center; /* Align icons and text along the x-axis */
   margin: 0;
   padding: 0;
 }
@@ -218,13 +178,12 @@ nav ul li a:focus {
   text-decoration: none;
 }
 
-
-/*
-    Social Media Links Styles (Optional)
-*/
+/* Social Media Links Styles */
 nav ul li.social-media a {
   margin-left: 10px;
   font-size: 1.2rem;
+  position: relative;
+  top: 1px; /* Move icons down by 1px */
 }
 
 nav ul li.social-media a:hover,
@@ -232,10 +191,7 @@ nav ul li.social-media a:focus {
   color: var(--accent-hover-color);
 }
 
-
-/*
-    Main Content Styles.
-*/
+/* Main Content Styles */
 main {
   padding: var(--padding);
   max-width: var(--max-width);
@@ -245,21 +201,19 @@ main {
 section {
   padding: var(--padding);
   margin: var(--padding) 0;
-  background-color: rgba(255, 255, 255, 0.65); /* Semi-transparent to blend with background */
+  background-color: rgba(255, 255, 255, 0.85); /* Reduced transparency for #fafafa areas */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start with slight downward offset */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition effect */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Visible class to trigger animation */
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Center titles in specific sections */
 #about h2,
 #collections h2,
 #projects h2,
@@ -268,13 +222,9 @@ section.visible {
   text-align: center;
 }
 
-
-/*
-    Home Section Styles.
-*/
+/* Home Section Styles */
 #home {
   text-align: center;
-  /* Removed background-image to use the body's background */
   background-size: cover;
   background-position: center;
   color: var(--secondary-color);
@@ -282,7 +232,7 @@ section.visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 1; /* Ensure the home section is visible */
+  opacity: 1;
   transform: none;
   background-color: rgba(0, 0, 0, 0.4); /* Added a semi-transparent background for readability */
 }
@@ -290,7 +240,7 @@ section.visible {
 #home h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  font-weight: 300; /* Use light font weight for elegance */
+  font-weight: 300;
 }
 
 #home p {
@@ -298,10 +248,7 @@ section.visible {
   font-weight: 300;
 }
 
-
-/*
-    About Me Section Styles.
-*/
+/* About Me Section Styles */
 #about {
   background-color: rgba(255, 255, 255, 0.9);
   padding: var(--padding);
@@ -355,10 +302,7 @@ section.visible {
   }
 }
 
-
-/*
-    Collections Gallery Styles.
-*/
+/* Collections Gallery Styles */
 .collection-gallery {
   display: grid;
   gap: 20px;
@@ -366,7 +310,7 @@ section.visible {
 }
 
 .collection-item {
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.85); /* Reduced transparency for #fafafa areas */
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -395,10 +339,7 @@ section.visible {
   font-weight: 300;
 }
 
-
-/*
-    Projects Gallery Styles.
-*/
+/* Projects Gallery Styles */
 .projects-gallery {
   display: grid;
   gap: 20px;
@@ -406,7 +347,7 @@ section.visible {
 }
 
 .project-item {
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.85); /* Reduced transparency for #fafafa areas */
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -435,8 +376,15 @@ section.visible {
   font-weight: 300;
 }
 
+/* Contact Section Styles */
+#contact h2 {
+  margin-bottom: 10px; /* Further reduction if needed */
+}
 
-/*Contact Section Styles.*/
+#contact p {
+  margin-top: -30px; /* Further reduced by 20px */
+  text-align: center;
+}
 
 #contact ul {
   list-style: none;
@@ -500,10 +448,7 @@ button:focus {
   background-color: #555;
 }
 
-
-/*
-    Footer Styles.
-*/
+/* Footer Styles */
 footer {
   background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
   color: var(--secondary-color);
@@ -514,10 +459,7 @@ footer {
   font-weight: 300;
 }
 
-
-/*
-    Responsive Design for Tablets and Mobile Devices.
-*/
+/* Responsive Design for Tablets and Mobile Devices */
 @media (max-width: 768px) {
   .collection-gallery {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -542,25 +484,19 @@ footer {
     height: 40vh;
   }
 
-  /*
-    Display the hamburger menu button on small screens.
-  */
+  /* Display the hamburger menu button on small screens. */
   #nav-toggle {
     display: block;
   }
 
-  /*
-    Hide the navigation menu by default on small screens.
-  */
+  /* Hide the navigation menu by default on small screens. */
   nav ul {
     display: none;
     flex-direction: column;
     align-items: center;
   }
 
-  /*
-    Show the navigation menu when active.
-  */
+  /* Show the navigation menu when active. */
   nav ul.active {
     display: flex;
   }

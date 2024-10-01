@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--
-        Meta tags for character set, compatibility, responsiveness, and SEO.
-        Title of the website.
-    -->
+    <!-- Meta tags for character set, compatibility, responsiveness, and SEO. Title of the website. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menswear Designer Portfolio</title>
     <meta name="description" content="Portfolio website showcasing the menswear designs of Jackson S. Dallas, including seasonal collections and other projects.">
-
 
     <!-- Open Graph Meta Tags for better social media integration -->
     <meta property="og:title" content="Menswear Designer Portfolio">
@@ -18,7 +14,6 @@
     <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
-
 
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
@@ -35,25 +30,20 @@
     }
     </script>
 
-
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
-
 
     <!-- Link to Favicon -->
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 
-
     <!-- Link to Font Awesome for Icons (Optional) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="manifest" href="manifest.json">
-
 </head>
 <body>
     <!-- Skip Navigation Link for accessibility. -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
 
     <!-- Header section containing the navigation menu. -->
     <header>
@@ -63,22 +53,21 @@
                 &#9776;
             </button>
             <ul id="nav-menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#collections">COLLECTIONS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <!-- New "X" Tab -->
-                <li><a href="x.html">X</a></li>
                 <!-- Social Media Links -->
                 <li class="social-media">
                     <a href="https://instagram.com/jacksondallas__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </li>
+                <!-- "X" Tab -->
+                <li><a href="x.html">X</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#collections">COLLECTIONS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-
 
     <!-- Main content of the website. -->
     <main id="main-content">
@@ -88,12 +77,11 @@
             <p>Explore my collections and projects that showcase my passion for men's fashion.</p>
         </section>
 
-
         <!-- About Me section to introduce yourself. -->
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="images\backgrounds\background.jpg" alt="Jackson S. Dallas - Menswear Designer" loading="lazy">
+                <img src="images/backgrounds/background.jpg" alt="Jackson S. Dallas - Menswear Designer" loading="lazy">
                 <div class="about-text">
                     <p>X Paragraph 1.</p>
                     <p>X Paragraph 2.</p>
@@ -101,7 +89,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- Collections section showcasing previous seasonal collections. -->
         <section id="collections">
@@ -134,7 +121,6 @@
             </div>
         </section>
 
-
         <!-- Projects section showcasing additional work. -->
         <section id="projects">
             <h2>Untitled Projects</h2>
@@ -149,11 +135,10 @@
             </div>
         </section>
 
-
         <!-- Contact section with a contact form and contact information. -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>To get in touch, feel free to reach out via the following methods:</p>
+            <p style="text-align: center; margin-top: -10px;">To get in touch, feel free to reach out via the following methods:</p>
             <ul>
                 <li>Email: <a href="mailto:jacksondallas2002@gmail.com">jacksondallas2002@gmail.com</a></li>
                 <li>Phone: <a href="tel:+16783576949">(678) 357-6949</a></li>
@@ -161,32 +146,26 @@
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank">Jackson's LinkedIn</a></li>
             </ul>
 
-
-            <!-- Contact Form  -->
+            <!-- Contact Form -->
             <form action="submit-form.php" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
-
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-
 
                 <button type="submit">Send</button>
             </form>
         </section>
     </main>
 
-
     <!-- Footer section with copyright. -->
     <footer>
         <p>&copy; 2024 Jackson S. Dallas. All rights reserved.</p>
     </footer>
-
 
     <!-- Link to external JavaScript file for interactivity.  -->
     <script src="scripts/main.js"></script>
