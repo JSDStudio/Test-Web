@@ -40,7 +40,7 @@
   --padding: 20px;
   --transition-speed: 0.3s;
   --max-width: 1200px;
-  --accent-hover-color: #ffd700; /* Gold color for hover effects */
+  --accent-hover-color: #ffe863; /* Gold color for hover effects */
   --overlay-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
 }
 
@@ -57,14 +57,14 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--primary-color);
-  
+
   /* Background Image */
   background-image: url('images/backgrounds/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  
+
   /* Overlay to ensure readability */
   position: relative;
   z-index: 0;
@@ -86,9 +86,7 @@ body::before {
   z-index: -1; /* Behind all content */
 }
 
-/*
-    Custom Scrollbar Styles
-*/
+/* Custom Scrollbar Styles */
 /* For WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 14px; /* Adjusted the width to be a little wider */
@@ -242,7 +240,8 @@ section.visible {
 }
 
 #home p {
-  font-size: 1.2rem;
+  margin-top: -10px;
+  font-size: 1.15rem;
   font-weight: 300;
 }
 

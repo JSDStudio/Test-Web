@@ -1,0 +1,88 @@
+/* Tab navigation styles */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.tabs button {
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 0 2px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #555;
+}
+
+.tabs button.active {
+  background-color: #444;
+}
+
+/* Tab content styles */
+.tabcontent {
+  display: none;
+  padding: 40px;
+  text-align: center;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in animation */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Achievements styles */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.stat-item .counter {
+  font-size: 3rem;
+  color: #333;
+}
+
+/* Team members section */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+}

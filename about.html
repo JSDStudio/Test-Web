@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set, compatibility, responsiveness, and SEO. Title of the page. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Menswear Designer Portfolio</title>
+    <meta name="description" content="About Jackson S. Dallas - Menswear Designer">
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/about.css">
+
+    <!-- Link to Favicon -->
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Link to Font Awesome for Icons (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Skip Navigation Link for accessibility. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header section containing the navigation menu. -->
+    <header>
+        <nav role="navigation">
+            <!-- Hamburger menu button for mobile devices. -->
+            <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                &#9776;
+            </button>
+            <ul id="nav-menu">
+                <!-- Social Media Links first -->
+                <li class="social-media">
+                    <a href="https://instagram.com/jacksondallas__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <!-- Menu items -->
+                <li><a href="x.html">X</a></li>
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#collections">COLLECTIONS</a></li>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the "About" page with interactive tabs. -->
+    <main id="main-content">
+        <!-- Tab navigation for content -->
+        <section id="about-tabs">
+            <div class="tabs">
+                <button class="tablinks active" onclick="openTab(event, 'About')">About</button>
+                <button class="tablinks" onclick="openTab(event, 'Vision')">Vision</button>
+                <button class="tablinks" onclick="openTab(event, 'Achievements')">Achievements</button>
+                <button class="tablinks" onclick="openTab(event, 'Team')">Team</button>
+            </div>
+
+            <!-- Tab content sections -->
+            <div id="About" class="tabcontent" style="display: block;">
+                <h2>About Jackson S. Dallas</h2>
+                <p>[WORK IN PROGRESS]</p>
+                <p>[WORK IN PROGRESS]</p>
+                <p>[WORK IN PROGRESS]</p>
+            </div>
+
+            <div id="Vision" class="tabcontent">
+                <h2>My Vision</h2>
+                <p>[WORK IN PROGRESS]</p>
+                <p>[WORK IN PROGRESS]</p>
+            </div>
+
+            <div id="Achievements" class="tabcontent">
+                <h2>Achievements</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="counter" data-target="6">0</span>
+                        <p>X</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-target="66">0</span>
+                        <p>X</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-target="666">0</span>
+                        <p>X</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Team" class="tabcontent">
+                <h2>Meet the Team</h2>
+                <div class="team-members">
+                    <!-- Team member 1 -->
+                    <div class="team-member">
+                        <img src="images/team/team-member1.jpg" alt="Team Member 1">
+                        <h3>John Doe</h3>
+                        <p>[WORK IN PROGRESS]</p>
+                    </div>
+                    <!-- Team member 2 -->
+                    <div class="team-member">
+                        <img src="images/team/team-member2.jpg" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>[WORK IN PROGRESS]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Jackson S. Dallas. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file for interactivity -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/about.js"></script>
+</body>
+</html>
