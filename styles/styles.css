@@ -57,14 +57,14 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--primary-color);
-
+  
   /* Background Image */
   background-image: url('images/backgrounds/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-
+  
   /* Overlay to ensure readability */
   position: relative;
   z-index: 0;
@@ -214,11 +214,9 @@ section.visible {
   transform: translateY(0);
 }
 
-#about h2,
 #collections h2,
 #projects h2,
-#contact h2,
-#x-page h1 {
+#contact h2 {
   text-align: center;
 }
 
@@ -246,60 +244,6 @@ section.visible {
 #home p {
   font-size: 1.2rem;
   font-weight: 300;
-}
-
-/* About Me Section Styles */
-#about {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: var(--padding);
-  margin: var(--padding) 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#about h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: var(--primary-color);
-  font-weight: 300;
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.about-content img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 250px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-content img {
-    width: 200px;
-  }
-
-  .about-text {
-    min-width: 0;
-  }
 }
 
 /* Collections Gallery Styles */
