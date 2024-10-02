@@ -30,35 +30,70 @@
     }
     </script>
 
-    <!-- Link to the external CSS file -->
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- Link to Favicon -->
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 
-    <!-- Link to Font Awesome for Icons (Optional) -->
+    <!-- Link to Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Font Face Declarations for Source Sans Pro -->
+    <style>
+        /* cyrillic-ext */
+        @font-face {
+          font-family: 'Source Sans Pro';
+          font-style: normal;
+          font-weight: 300;
+          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2') format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* latin-ext */
+        @font-face {
+          font-family: 'Source Sans Pro';
+          font-style: normal;
+          font-weight: 300;
+          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2') format('woff2');
+          unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+          font-family: 'Source Sans Pro';
+          font-style: normal;
+          font-weight: 300;
+          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2') format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+
+    <!-- Manifest file for PWA support -->
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <!-- Skip Navigation Link for accessibility. -->
+    <!-- Skip Navigation Link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header section containing the navigation menu. -->
+    <!-- Header section containing the navigation menu -->
     <header>
         <nav role="navigation">
-            <!-- Hamburger menu button for mobile devices. -->
+            <!-- Hamburger menu button for mobile devices -->
             <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
                 &#9776;
             </button>
             <ul id="nav-menu">
-                <!-- Social Media Links first -->
+                <!-- Social Media Links -->
                 <li class="social-media">
-                    <a href="https://instagram.com/jacksondallas__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/jacksondallas__" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </li>
-                <!-- Menu items in the specified order -->
+                <!-- Menu items -->
                 <li><a href="x.html">X</a></li>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -69,83 +104,106 @@
         </nav>
     </header>
 
-    <!-- Main content of the website. -->
+    <!-- Main content of the website -->
     <main id="main-content">
-        <!-- Home section with a welcoming message and background image. -->
+        <!-- Home section with a welcoming message and background image -->
         <section id="home">
             <h1>Welcome to My Menswear Design Portfolio</h1>
             <p>Explore my collections and projects that showcase my passion for men's fashion.</p>
         </section>
 
-        <!-- Collections section showcasing previous seasonal collections as a carousel. -->
+        <!-- Collections section showcasing previous seasonal collections as a carousel -->
         <section id="collections">
             <h2>Runway Catalogue</h2>
             <div class="carousel-container" role="region" aria-label="Runway Collections Carousel">
-                <!-- Loading Indicator -->
-                <div class="carousel-loader">
-                    <div></div><div></div><div></div>
-                </div>
-
                 <div class="carousel-track-container">
                     <ul class="carousel-track">
-                        <!-- Collection Items -->
+                        <!-- Collection Item 1 -->
                         <li class="carousel-slide">
                             <div class="collection-item">
+                                <!-- Image and Overlay wrapped in a link -->
+                                <a href="under-construction.html">
+                                    <div class="image-container">
+                                        <img src="images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175.jpg"
+                                             srcset="
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_small.jpg 480w,
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_medium.jpg 800w,
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_large.jpg 1200w"
+                                             sizes="(max-width: 768px) 100vw, 50vw"
+                                             alt="SS23 Runway" loading="lazy">
+                                        <!-- Overlay -->
+                                        <div class="overlay">
+                                            <span>Explore Collection</span>
+                                        </div>
+                                    </div>
+                                </a>
                                 <h3><a href="under-construction.html">SS23 Blood Sweat & Tears</a></h3>
-                                <div class="image-container">
-                                    <img src="images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175.jpg"
-                                         srcset="
-                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_small.jpg 480w,
-                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_medium.jpg 800w,
-                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_large.jpg 1200w"
-                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                         alt="SS/23 Runway" loading="lazy">
-                                </div>
                                 <p>A collection inspired by raw emotions and strength.</p>
                             </div>
                         </li>
+
+                        <!-- Collection Item 2 -->
                         <li class="carousel-slide">
                             <div class="collection-item">
+                                <a href="under-construction.html">
+                                    <div class="image-container">
+                                        <img src="images/collections/FW23/Final Look/FDSA Silver Linings Show-086-Edit.jpg"
+                                             srcset="
+                                                images/collections/FW23/Final Look/FDSA_Silver_Linings_Small.jpg 480w,
+                                                images/collections/FW23/Final Look/FDSA_Silver_Linings_Medium.jpg 800w,
+                                                images/collections/FW23/Final Look/FDSA_Silver_Linings_Large.jpg 1200w"
+                                             sizes="(max-width: 768px) 100vw, 50vw"
+                                             alt="FW23 Runway" loading="lazy">
+                                        <div class="overlay">
+                                            <span>Explore Collection</span>
+                                        </div>
+                                    </div>
+                                </a>
                                 <h3><a href="under-construction.html">FW23 Silver Linings</a></h3>
-                                <div class="image-container">
-                                    <img src="images/collections/FW23/Final Look/FDSA Silver Linings Show-086-Edit.jpg"
-                                         srcset="
-                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Small.jpg 480w,
-                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Medium.jpg 800w,
-                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Large.jpg 1200w"
-                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                         alt="FW/23 Runway" loading="lazy">
-                                </div>
                                 <p>Elegant designs with a touch of modern sophistication.</p>
                             </div>
                         </li>
+
+                        <!-- Collection Item 3 -->
                         <li class="carousel-slide">
                             <div class="collection-item">
+                                <a href="under-construction.html">
+                                    <div class="image-container">
+                                        <img src="images/collections/SS24/Final Look/Final_Look.jpg"
+                                             srcset="
+                                                images/collections/SS24/Final Look/Final_Look_Small.jpg 480w,
+                                                images/collections/SS24/Final Look/Final_Look_Medium.jpg 800w,
+                                                images/collections/SS24/Final Look/Final_Look_Large.jpg 1200w"
+                                             sizes="(max-width: 768px) 100vw, 50vw"
+                                             alt="SS24 Runway" loading="lazy">
+                                        <div class="overlay">
+                                            <span>Explore Collection</span>
+                                        </div>
+                                    </div>
+                                </a>
                                 <h3><a href="under-construction.html">SS24 Tales & Tropes</a></h3>
-                                <div class="image-container">
-                                    <img src="images/collections/SS24/Final Look/Final_Look.jpg"
-                                         srcset="
-                                            images/collections/SS24/Final Look/Final_Look_Small.jpg 480w,
-                                            images/collections/SS24/Final Look/Final_Look_Medium.jpg 800w,
-                                            images/collections/SS24/Final Look/Final_Look_Large.jpg 1200w"
-                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                         alt="SS/24 Runway" loading="lazy">
-                                </div>
                                 <p>Narrative-driven pieces blending classic and contemporary styles.</p>
                             </div>
                         </li>
+
+                        <!-- Collection Item 4 -->
                         <li class="carousel-slide">
                             <div class="collection-item">
+                                <a href="under-construction.html">
+                                    <div class="image-container">
+                                        <img src="images/collections/FW24/Final Look/fw24_trampled_flowers.jpg"
+                                             srcset="
+                                                images/collections/FW24/Final Look/fw24_trampled_flowers_small.jpg 480w,
+                                                images/collections/FW24/Final Look/fw24_trampled_flowers_medium.jpg 800w,
+                                                images/collections/FW24/Final Look/fw24_trampled_flowers_large.jpg 1200w"
+                                             sizes="(max-width: 768px) 100vw, 50vw"
+                                             alt="FW24 Runway" loading="lazy">
+                                        <div class="overlay">
+                                            <span>Explore Collection</span>
+                                        </div>
+                                    </div>
+                                </a>
                                 <h3><a href="under-construction.html">FW24 Trampled Flowers</a></h3>
-                                <div class="image-container">
-                                    <img src="images/collections/FW24/Final Look/fw24_trampled_flowers.jpg"
-                                         srcset="
-                                            images/collections/FW24/Final Look/fw24_trampled_flowers_small.jpg 480w,
-                                            images/collections/FW24/Final Look/fw24_trampled_flowers_medium.jpg 800w,
-                                            images/collections/FW24/Final Look/fw24_trampled_flowers_large.jpg 1200w"
-                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                         alt="FW/24 Runway" loading="lazy">
-                                </div>
                                 <p>A bold collection that juxtaposes beauty and grit.</p>
                             </div>
                         </li>
@@ -164,7 +222,7 @@
             </div>
         </section>
 
-        <!-- Projects section showcasing additional work. -->
+        <!-- Projects section showcasing additional work -->
         <section id="projects">
             <h2>Untitled Projects</h2>
             <div class="projects-gallery">
@@ -178,7 +236,7 @@
             </div>
         </section>
 
-        <!-- Contact section with a contact form and contact information. -->
+        <!-- Contact section with contact information -->
         <section id="contact">
             <h2>Contact Me</h2>
             <p style="text-align: center; margin-top: -10px;">To get in touch, feel free to reach out via the following methods:</p>
@@ -188,29 +246,15 @@
                 <li>Instagram: <a href="https://instagram.com/jacksondallas__" target="_blank">@jacksondallas__</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/jackson-dallas-b648a3195" target="_blank">Jackson's LinkedIn</a></li>
             </ul>
-
-            <!-- Contact Form -->
-            <form action="submit-form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
         </section>
     </main>
 
-    <!-- Footer section with copyright. -->
+    <!-- Footer section with copyright -->
     <footer>
         <p>&copy; 2024 Jackson S. Dallas. All rights reserved.</p>
     </footer>
 
-    <!-- Link to external JavaScript file for interactivity.  -->
+    <!-- Link to external JavaScript file for interactivity -->
     <script src="scripts/main.js"></script>
 </body>
 </html>

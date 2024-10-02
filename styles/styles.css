@@ -1,36 +1,5 @@
 /*
-    Font Face Declarations for Source Sans Pro
-*/
-
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2') format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2') format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/*
-    CSS Variables for easy theming and maintenance.
+    CSS Variables for easy theming and maintenance
 */
 :root {
   --primary-color: #333;
@@ -46,10 +15,10 @@
 }
 
 /*
-    General Styles for the entire website.
+    General Styles for the entire website
 */
 html {
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -90,7 +59,7 @@ body::before {
 /* Custom Scrollbar Styles */
 /* For WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 14px; /* Adjusted the width to be a little wider */
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
@@ -104,7 +73,7 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(to top, var(--primary-color), var(--accent-color)); /* Reverse gradient on hover */
+  background-image: linear-gradient(to top, var(--primary-color), var(--accent-color));
 }
 
 /* Skip Navigation Link Styles */
@@ -125,7 +94,7 @@ body::before {
 
 /* Header and Navigation Styles */
 header {
-  background-color: rgba(51, 51, 51, 0.81); /* Slight transparency to blend with background */
+  background-color: rgba(51, 51, 51, 0.81);
   color: var(--secondary-color);
   padding: 10px 0;
   position: sticky;
@@ -136,14 +105,14 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  align-items: center; /* Aligning all items to the middle x-axis */
+  align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 20px;
 }
 
 #nav-toggle {
-  display: none; /* Hidden by default */
+  display: none;
   background: none;
   border: none;
   font-size: 2rem;
@@ -155,7 +124,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center; /* Align icons and text along the x-axis */
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -182,7 +151,7 @@ nav ul li.social-media a {
   margin-left: 10px;
   font-size: 1.2rem;
   position: relative;
-  top: 1px; /* Move icons down by 1px */
+  top: 1px;
 }
 
 nav ul li.social-media a:hover,
@@ -200,7 +169,7 @@ main {
 section {
   padding: var(--padding);
   margin: var(--padding) 0;
-  background-color: rgba(255, 255, 255, 0.85); /* Reduced transparency for #fafafa areas */
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -231,7 +200,7 @@ section.visible {
   justify-content: center;
   opacity: 1;
   transform: none;
-  background-color: rgba(0, 0, 0, 0.4); /* Added a semi-transparent background for readability */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #home h1 {
@@ -256,19 +225,17 @@ section.visible {
 .carousel-track-container {
   overflow: hidden;
   position: relative;
-  perspective: 1000px; /* For parallax effect */
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); /* Customized timing and easing */
+  transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
   will-change: transform;
 }
 
 .carousel-slide {
   min-width: 50%; /* Display two slides at a time */
   box-sizing: border-box;
-  transform-style: preserve-3d; /* For parallax effect */
 }
 
 .carousel-slide .collection-item {
@@ -279,7 +246,6 @@ section.visible {
   text-align: center;
   overflow: hidden;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
-  backface-visibility: hidden; /* For parallax effect */
 }
 
 .carousel-slide .collection-item:hover {
@@ -305,6 +271,33 @@ section.visible {
   object-fit: cover;
 }
 
+/* Overlay styles for the carousel images */
+.carousel-slide .image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide .image-container:hover .overlay {
+  opacity: 1;
+}
+
+.carousel-slide .image-container .overlay span {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .carousel-slide .collection-item h3 {
   margin-top: 10px;
   font-weight: 300;
@@ -325,6 +318,17 @@ section.visible {
   margin-top: 5px;
   font-size: 0.95rem;
   font-weight: 300;
+}
+
+/* Ensure the anchor tag fills the container */
+.collection-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.collection-item a:hover h3,
+.collection-item a:focus h3 {
+  color: var(--accent-hover-color);
 }
 
 /* Navigation Buttons */
@@ -376,45 +380,6 @@ section.visible {
 .carousel-indicator.current-slide {
   background-color: var(--accent-hover-color);
   opacity: 1;
-}
-
-/* Parallax Effect */
-.carousel-track-container:hover .carousel-slide {
-  transform: rotateY(15deg);
-}
-
-.carousel-track-container:hover .carousel-slide:hover {
-  transform: rotateY(0deg);
-}
-
-/* Loading Indicator */
-.carousel-loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.carousel-loader div {
-  width: 15px;
-  height: 15px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  display: inline-block;
-  animation: bounce 1.4s infinite ease-in-out both;
-}
-
-.carousel-loader div:nth-child(1) {
-  animation-delay: -0.32s;
-}
-
-.carousel-loader div:nth-child(2) {
-  animation-delay: -0.16s;
-}
-
-@keyframes bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1); }
 }
 
 /* Projects Gallery Styles */
@@ -485,50 +450,9 @@ section.visible {
   text-decoration: none;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-top: 10px;
-  font-weight: 300;
-}
-
-input,
-textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: var(--font-family);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color var(--transition-speed);
-  font-weight: 300;
-}
-
-button:hover,
-button:focus {
-  background-color: var(--hover-color);
-}
-
 /* Footer Styles */
 footer {
-  background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
+  background-color: rgba(51, 51, 51, 0.8);
   color: var(--secondary-color);
   text-align: center;
   padding: 10px 0;
@@ -537,7 +461,7 @@ footer {
   font-weight: 300;
 }
 
-/* Responsive Design for Tablets and Mobile Devices */
+/* Responsive Design */
 @media (max-width: 768px) {
   .carousel-slide {
     min-width: 100%;
@@ -546,35 +470,20 @@ footer {
   .projects-gallery {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-}
 
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  #home {
-    height: 40vh;
-  }
-
-  /* Display the hamburger menu button on small screens. */
+  /* Display the hamburger menu button on small screens */
   #nav-toggle {
     display: block;
   }
 
-  /* Hide the navigation menu by default on small screens. */
+  /* Hide the navigation menu by default on small screens */
   nav ul {
     display: none;
     flex-direction: column;
     align-items: center;
   }
 
-  /* Show the navigation menu when active. */
+  /* Show the navigation menu when active */
   nav ul.active {
     display: flex;
   }

@@ -1,4 +1,4 @@
-// JavaScript to control the behavior of the mobile navigation menu
+// Mobile Navigation Menu
 document.getElementById('nav-toggle').addEventListener('click', function() {
   const navMenu = document.getElementById('nav-menu');
   const isExpanded = this.getAttribute('aria-expanded') === 'true';
@@ -55,41 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let isMoving = false;
 
-    // Clone slides to create an infinite loop effect
-    const clones = [];
-    slides.forEach((slide) => {
-        const cloneStart = slide.cloneNode(true);
-        cloneStart.classList.add('clone');
-        track.appendChild(cloneStart);
-        clones.push(cloneStart);
-
-        const cloneEnd = slide.cloneNode(true);
-        cloneEnd.classList.add('clone');
-        track.insertBefore(cloneEnd, slides[0]);
-        clones.push(cloneEnd);
-    });
-
-    const allSlides = Array.from(track.children);
-
     // Arrange the slides next to one another
     const setSlidePosition = (slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     };
 
-    allSlides.forEach(setSlidePosition);
-
-    // Move the track to show the first original slide
-    const startPosition = slideWidth * slides.length;
-    track.style.transform = 'translateX(-' + startPosition + 'px)';
-    currentIndex = slides.length;
-
-    // Update dots to match current slide
-    const updateDots = (currentDot, targetDot) => {
-        currentDot.classList.remove('current-slide');
-        currentDot.setAttribute('aria-selected', 'false');
-        targetDot.classList.add('current-slide');
-        targetDot.setAttribute('aria-selected', 'true');
-    };
+    slides.forEach(setSlidePosition);
 
     const moveToSlide = (index) => {
         if (isMoving) return;
@@ -99,34 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = index;
 
         // Update dots
-        const slidesLength = slides.length;
-        const activeIndex = (currentIndex - slidesLength) % slidesLength;
-        const currentDot = dotsNav.querySelector('.current-slide');
-        const targetDot = dots[(activeIndex + slidesLength) % slidesLength];
-        updateDots(currentDot, targetDot);
+        updateDots();
+    };
+
+    const updateDots = () => {
+        dots.forEach(dot => {
+            dot.classList.remove('current-slide');
+            dot.setAttribute('aria-selected', 'false');
+        });
+        dots[currentIndex].classList.add('current-slide');
+        dots[currentIndex].setAttribute('aria-selected', 'true');
     };
 
     const handleTransitionEnd = () => {
         isMoving = false;
-        const slidesLength = slides.length;
-        if (currentIndex >= allSlides.length - slidesLength) {
-            currentIndex = slidesLength;
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
-        }
-        if (currentIndex <= slidesLength - 1) {
-            currentIndex = allSlides.length - (slidesLength * 2);
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
-        }
     };
 
     // Automatic Slide Transition
     const autoSlide = () => {
-        moveToSlide(currentIndex + 1);
+        moveToSlide((currentIndex + 1) % slides.length);
     };
 
-    let slideInterval = setInterval(autoSlide, 3000); // Change slide every 3 seconds
+    let slideInterval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
 
     // Pause on hover
     track.addEventListener('mouseenter', () => {
@@ -134,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     track.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(autoSlide, 3000);
+        slideInterval = setInterval(autoSlide, 5000);
     });
 
     // Reset transition and position on transition end
@@ -143,12 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Button Event Listeners
     nextButton.addEventListener('click', () => {
         clearInterval(slideInterval);
-        moveToSlide(currentIndex + 1);
+        moveToSlide((currentIndex + 1) % slides.length);
     });
 
     prevButton.addEventListener('click', () => {
         clearInterval(slideInterval);
-        moveToSlide(currentIndex - 1);
+        moveToSlide((currentIndex - 1 + slides.length) % slides.length);
     });
 
     // Dots Navigation
@@ -160,12 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(slideInterval);
 
         const targetIndex = dots.findIndex(dot => dot === targetDot);
-        moveToSlide(slides.length + targetIndex);
-    });
-
-    // Loading Indicator
-    window.addEventListener('load', () => {
-        const loader = document.querySelector('.carousel-loader');
-        loader.style.display = 'none';
+        moveToSlide(targetIndex);
     });
 });
