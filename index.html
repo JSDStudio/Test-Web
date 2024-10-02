@@ -77,33 +77,89 @@
             <p>Explore my collections and projects that showcase my passion for men's fashion.</p>
         </section>
 
-        <!-- Collections section showcasing previous seasonal collections. -->
+        <!-- Collections section showcasing previous seasonal collections as a carousel. -->
         <section id="collections">
             <h2>Runway Catalogue</h2>
-            <div class="collection-gallery">
-                <!-- Collection 1: SS23 Blood Sweat & Tears -->
-                <div class="collection-item">
-                    <img src="images\collections\SS23\Final Look\D9BC09B0-688A-4A47-B243-24F55E7CF175.jpg" alt="SS/23 Runway" loading="lazy">
-                    <h3>SS23 Runway - Blood Sweat & Tears</h3>
-                    <p>A collection inspired by raw emotions and strength. [WORK IN PROGRESS]</p>
+            <div class="carousel-container" role="region" aria-label="Runway Collections Carousel">
+                <!-- Loading Indicator -->
+                <div class="carousel-loader">
+                    <div></div><div></div><div></div>
                 </div>
-                <!-- Collection 2: FW23 Silver Linings -->
-                <div class="collection-item">
-                    <img src="images\collections\FW23\Final Look\FDSA-9.jpg" alt="FW/23 Runway" loading="lazy">
-                    <h3>FW23 Runway - Silver Linings</h3>
-                    <p>Elegant designs with a touch of modern sophistication. [WORK IN PROGRESS]</p>
+
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <!-- Collection Items -->
+                        <li class="carousel-slide">
+                            <div class="collection-item">
+                                <h3><a href="under-construction.html">SS23 Blood Sweat & Tears</a></h3>
+                                <div class="image-container">
+                                    <img src="images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175.jpg"
+                                         srcset="
+                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_small.jpg 480w,
+                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_medium.jpg 800w,
+                                            images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_large.jpg 1200w"
+                                         sizes="(max-width: 768px) 100vw, 50vw"
+                                         alt="SS/23 Runway" loading="lazy">
+                                </div>
+                                <p>A collection inspired by raw emotions and strength.</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="collection-item">
+                                <h3><a href="under-construction.html">FW23 Silver Linings</a></h3>
+                                <div class="image-container">
+                                    <img src="images/collections/FW23/Final Look/FDSA Silver Linings Show-086-Edit.jpg"
+                                         srcset="
+                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Small.jpg 480w,
+                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Medium.jpg 800w,
+                                            images/collections/FW23/Final Look/FDSA_Silver_Linings_Large.jpg 1200w"
+                                         sizes="(max-width: 768px) 100vw, 50vw"
+                                         alt="FW/23 Runway" loading="lazy">
+                                </div>
+                                <p>Elegant designs with a touch of modern sophistication.</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="collection-item">
+                                <h3><a href="under-construction.html">SS24 Tales & Tropes</a></h3>
+                                <div class="image-container">
+                                    <img src="images/collections/SS24/Final Look/Final_Look.jpg"
+                                         srcset="
+                                            images/collections/SS24/Final Look/Final_Look_Small.jpg 480w,
+                                            images/collections/SS24/Final Look/Final_Look_Medium.jpg 800w,
+                                            images/collections/SS24/Final Look/Final_Look_Large.jpg 1200w"
+                                         sizes="(max-width: 768px) 100vw, 50vw"
+                                         alt="SS/24 Runway" loading="lazy">
+                                </div>
+                                <p>Narrative-driven pieces blending classic and contemporary styles.</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="collection-item">
+                                <h3><a href="under-construction.html">FW24 Trampled Flowers</a></h3>
+                                <div class="image-container">
+                                    <img src="images/collections/FW24/Final Look/fw24_trampled_flowers.jpg"
+                                         srcset="
+                                            images/collections/FW24/Final Look/fw24_trampled_flowers_small.jpg 480w,
+                                            images/collections/FW24/Final Look/fw24_trampled_flowers_medium.jpg 800w,
+                                            images/collections/FW24/Final Look/fw24_trampled_flowers_large.jpg 1200w"
+                                         sizes="(max-width: 768px) 100vw, 50vw"
+                                         alt="FW/24 Runway" loading="lazy">
+                                </div>
+                                <p>A bold collection that juxtaposes beauty and grit.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Collection 3: SS24 Tales & Tropes -->
-                <div class="collection-item">
-                    <img src="images\collections\SS24\Final Look\Final Look.jpg" alt="SS/24 Runway" loading="lazy">
-                    <h3>SS24 Runway - Tales & Tropes</h3>
-                    <p>Narrative-driven pieces blending classic and contemporary styles. [WORK IN PROGRESS]</p>
-                </div>
-                <!-- Collection 4: FW24 Trampled Flowers -->
-                <div class="collection-item">
-                    <img src="images/collections/fw24-trampled-flowers.jpg" alt="FW/24 Runway" loading="lazy">
-                    <h3>FW24 Runway - Trampled Flowers</h3>
-                    <p>A bold collection that juxtaposes beauty and grit. [WORK IN PROGRESS]</p>
+                <!-- Navigation Arrows -->
+                <button class="carousel-button carousel-button--left" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-button carousel-button--right" aria-label="Next Slide">&#10095;</button>
+                <!-- Navigation Dots -->
+                <div class="carousel-nav" role="tablist">
+                    <button class="carousel-indicator current-slide" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                    <button class="carousel-indicator" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                    <button class="carousel-indicator" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+                    <button class="carousel-indicator" role="tab" aria-selected="false" aria-label="Slide 4"></button>
                 </div>
             </div>
         </section>
