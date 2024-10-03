@@ -52,15 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsNav = document.querySelector('.carousel-nav');
     const dots = Array.from(dotsNav.children);
     const slideWidth = slides[0].getBoundingClientRect().width;
-    let currentIndex = 0;
+    let currentIndex = 1;
     let isMoving = false;
+
+    // Clone first and last slides
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, slides[0]);
+
+    const allSlides = Array.from(track.children);
 
     // Arrange the slides next to one another
     const setSlidePosition = (slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     };
 
-    slides.forEach(setSlidePosition);
+    allSlides.forEach(setSlidePosition);
+
+    // Set initial position to the first actual slide
+    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
 
     const moveToSlide = (index) => {
         if (isMoving) return;
@@ -78,20 +90,29 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.classList.remove('current-slide');
             dot.setAttribute('aria-selected', 'false');
         });
-        dots[currentIndex].classList.add('current-slide');
-        dots[currentIndex].setAttribute('aria-selected', 'true');
+        dots[(currentIndex - 1 + dots.length) % dots.length].classList.add('current-slide');
+        dots[(currentIndex - 1 + dots.length) % dots.length].setAttribute('aria-selected', 'true');
     };
 
     const handleTransitionEnd = () => {
         isMoving = false;
+        if (currentIndex === allSlides.length - 1) {
+            track.style.transition = 'none';
+            currentIndex = 1;
+            track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+        } else if (currentIndex === 0) {
+            track.style.transition = 'none';
+            currentIndex = slides.length;
+            track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+        }
     };
 
     // Automatic Slide Transition
     const autoSlide = () => {
-        moveToSlide((currentIndex + 1) % slides.length);
+        moveToSlide(currentIndex + 1);
     };
 
-    let slideInterval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
+    let slideInterval = setInterval(autoSlide, 3000); // Change slide every 3 seconds
 
     // Pause on hover
     track.addEventListener('mouseenter', () => {
@@ -108,12 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Button Event Listeners
     nextButton.addEventListener('click', () => {
         clearInterval(slideInterval);
-        moveToSlide((currentIndex + 1) % slides.length);
+        moveToSlide(currentIndex + 1);
     });
 
     prevButton.addEventListener('click', () => {
         clearInterval(slideInterval);
-        moveToSlide((currentIndex - 1 + slides.length) % slides.length);
+        moveToSlide(currentIndex - 1);
     });
 
     // Dots Navigation
@@ -125,6 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(slideInterval);
 
         const targetIndex = dots.findIndex(dot => dot === targetDot);
-        moveToSlide(targetIndex);
+        moveToSlide(targetIndex + 1);
+    });
+
+    // Adjust positioning when resizing the window
+    window.addEventListener('resize', () => {
+        const newSlideWidth = slides[0].getBoundingClientRect().width;
+        allSlides.forEach((slide, index) => {
+            slide.style.left = newSlideWidth * index + 'px';
+        });
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(-' + newSlideWidth * currentIndex + 'px)';
     });
 });

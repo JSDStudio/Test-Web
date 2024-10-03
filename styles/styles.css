@@ -10,8 +10,8 @@
   --padding: 20px;
   --transition-speed: 0.3s;
   --max-width: 1200px;
-  --accent-hover-color: #ffe863; /* Gold color for hover effects */
-  --overlay-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  --accent-hover-color: #ffe863;
+  --overlay-color: rgba(0, 0, 0, 0.6);
 }
 
 /*
@@ -27,19 +27,13 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--primary-color);
-
-  /* Background Image */
-  background-image: url('images/backgrounds/background.jpg');
+  background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-
-  /* Overlay to ensure readability */
   position: relative;
   z-index: 0;
-
-  /* Custom Scrollbar for Firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) var(--accent-color);
 }
@@ -53,11 +47,10 @@ body::before {
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
-  z-index: -1; /* Behind all content */
+  z-index: -1;
 }
 
 /* Custom Scrollbar Styles */
-/* For WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 14px;
 }
@@ -234,15 +227,15 @@ section.visible {
 }
 
 .carousel-slide {
-  min-width: 50%; /* Display two slides at a time */
+  min-width: 50%;
   box-sizing: border-box;
 }
 
 .carousel-slide .collection-item {
   background-color: rgba(250, 250, 250, 0.85);
-  margin: 0 10px;
-  padding: 10px;
-  border-radius: 5px;
+  margin: 0 6px;
+  padding: 11px;
+  border-radius: 2.5px;
   text-align: center;
   overflow: hidden;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
@@ -257,7 +250,7 @@ section.visible {
 .carousel-slide .image-container {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Aspect ratio for taller images (1:1) */
+  padding-top: 150%;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -282,8 +275,10 @@ section.visible {
   opacity: 0;
   transition: opacity var(--transition-speed);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .carousel-slide .image-container:hover .overlay {
@@ -291,15 +286,30 @@ section.visible {
 }
 
 .carousel-slide .image-container .overlay span {
+  margin-top: -65px;
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.carousel-slide .image-container .overlay .title-overlay {
+  margin-top: 00px;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.carousel-slide .image-container .overlay .description-overlay {
+  margin-top: -6px;
+  color: var(--secondary-color);
+  font-size: .8rem;
+  font-weight: 400;
+}
+
 .carousel-slide .collection-item h3 {
-  margin-top: 10px;
+  margin-top: 6px;
   font-weight: 300;
 }
 
@@ -315,12 +325,12 @@ section.visible {
 }
 
 .carousel-slide .collection-item p {
-  margin-top: 5px;
+  margin-top: -20px;
+  margin-bottom: 10px;
   font-size: 0.95rem;
   font-weight: 300;
 }
 
-/* Ensure the anchor tag fills the container */
 .collection-item a {
   text-decoration: none;
   color: inherit;
@@ -333,16 +343,18 @@ section.visible {
 
 /* Navigation Buttons */
 .carousel-button {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--primary-color);
+  background: none;
   border: none;
-  color: var(--secondary-color);
-  padding: 10px;
+  color: var(--primary-color);
+  font-size: 3rem;
+  padding: 6px;
   cursor: pointer;
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.5;
   transition: opacity var(--transition-speed);
   z-index: 2;
 }
@@ -362,7 +374,7 @@ section.visible {
 /* Navigation Dots */
 .carousel-nav {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .carousel-indicator {
@@ -409,7 +421,7 @@ section.visible {
 }
 
 .project-item h3 {
-  margin-top: 10px;
+  margin-top: 5px;
   font-weight: 300;
 }
 
@@ -471,19 +483,16 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
-  /* Display the hamburger menu button on small screens */
   #nav-toggle {
     display: block;
   }
 
-  /* Hide the navigation menu by default on small screens */
   nav ul {
     display: none;
     flex-direction: column;
     align-items: center;
   }
 
-  /* Show the navigation menu when active */
   nav ul.active {
     display: flex;
   }
