@@ -11,9 +11,11 @@
     <!-- Open Graph Meta Tags for better social media integration -->
     <meta property="og:title" content="Menswear Designer Portfolio">
     <meta property="og:description" content="Explore the latest collections and projects by Jackson S. Dallas, a passionate menswear designer.">
-    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jackson S. Dallas - Menswear Designer">
+    <meta property="og:locale" content="en_US">
 
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
@@ -32,42 +34,16 @@
 
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/privacy.css">
 
     <!-- Link to Favicon -->
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
 
     <!-- Link to Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
 
-    <!-- Font Face Declarations for Source Sans Pro -->
-    <style>
-        /* cyrillic-ext */
-        @font-face {
-          font-family: 'Source Sans Pro';
-          font-style: normal;
-          font-weight: 300;
-          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2') format('woff2');
-          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-        }
-
-        /* latin-ext */
-        @font-face {
-          font-family: 'Source Sans Pro';
-          font-style: normal;
-          font-weight: 300;
-          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2') format('woff2');
-          unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-        }
-
-        /* latin */
-        @font-face {
-          font-family: 'Source Sans Pro';
-          font-style: normal;
-          font-weight: 300;
-          src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2') format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-    </style>
+    <!-- Google Fonts API for Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 
     <!-- Manifest file for PWA support -->
     <link rel="manifest" href="manifest.json">
@@ -117,37 +93,53 @@
             <h2>Runway Catalogue</h2>
             <div class="carousel-container" role="region" aria-label="Runway Collections Carousel">
                 <div class="carousel-track-container">
-                    <ul class="carousel-track">
-                        <!-- Collection Item 1 -->
-                        <li class="carousel-slide">
+                    <ul class="carousel-track" id="carousel-track" role="list">
+                        <!-- Collection Item 1: AW24 -->
+                        <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4">
                             <div class="collection-item">
-                                <h3><a href="under-construction.html">SS23 Blood Sweat & Tears</a></h3>
-                                <!-- Image and Overlay wrapped in a link -->
                                 <a href="under-construction.html">
                                     <div class="image-container">
-                                        <img src="images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175.jpg"
+                                        <img src="images\collections\FW24\AW24 Preview (TF).png"
                                              srcset="
-                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_small.jpg 480w,
-                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_medium.jpg 800w,
-                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_large.jpg 1200w"
+                                                images/collections/AW24/Final Look/AW24_trampled_flowers_small.jpg 480w,
+                                                images/collections/AW24/Final Look/AW24_trampled_flowers_medium.jpg 800w,
+                                                images/collections/AW24/Final Look/AW24_trampled_flowers_large.jpg 1200w"
                                              sizes="(max-width: 768px) 100vw, 50vw"
-                                             alt="SS23 Runway" loading="lazy">
+                                             alt="AW24 Runway" loading="lazy">
                                         <!-- Overlay -->
                                         <div class="overlay">
                                             <span>Explore Collection</span>
-                                            <div class="title-overlay">SS23 Blood Sweat & Tears</div>
-                                            <div class="description-overlay">A collection inspired by raw emotions and strength.</div>
+                                            <div class="description-overlay">Narrative-driven pieces blending classic and contemporary styles.</div>
                                         </div>
                                     </div>
                                 </a>
-                                
                             </div>
                         </li>
 
-                        <!-- Collection Item 2 -->
-                        <li class="carousel-slide">
+                        <!-- Collection Item 2: SS24 -->
+                        <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4">
                             <div class="collection-item">
-                                <h3><a href="under-construction.html">FW23 Silver Linings</a></h3>
+                                <a href="under-construction.html">
+                                    <div class="image-container">
+                                        <img src="images/collections/SS24/SS24 Preview (T&T).png"
+                                             srcset="
+                                                images/collections/SS24/Final Look/Final_Look_Small.jpg 480w,
+                                                images/collections/SS24/Final Look/Final_Look_Medium.jpg 800w,
+                                                images/collections/SS24/Final Look/Final_Look_Large.jpg 1200w"
+                                             sizes="(max-width: 768px) 100vw, 50vw"
+                                             alt="SS24 Runway" loading="lazy">
+                                        <div class="overlay">
+                                            <span>Explore Collection</span>
+                                            <div class="description-overlay">Narrative-driven pieces blending classic and contemporary styles.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Collection Item 3: FW23 -->
+                        <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4">
+                            <div class="collection-item">
                                 <a href="under-construction.html">
                                     <div class="image-container">
                                         <img src="images/collections/FW23/Final Look/FDSA Silver Linings Show-086-Edit.jpg"
@@ -159,67 +151,39 @@
                                              alt="FW23 Runway" loading="lazy">
                                         <div class="overlay">
                                             <span>Explore Collection</span>
-                                            <div class="title-overlay">FW23 Silver Linings</div>
                                             <div class="description-overlay">Elegant designs with a touch of modern sophistication.</div>
                                         </div>
                                     </div>
                                 </a>
-                              
                             </div>
                         </li>
 
-                        <!-- Collection Item 3 -->
-                        <li class="carousel-slide">
+                        <!-- Collection Item 4: SS23 -->
+                        <li class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4">
                             <div class="collection-item">
-                                <h3><a href="under-construction.html">SS24 Tales & Tropes</a></h3>
                                 <a href="under-construction.html">
                                     <div class="image-container">
-                                        <img src="images/collections/SS24/Final Look/Final_Look.jpg"
+                                        <img src="images/collections/SS23/SS23 Preview 3 (BST).png"
                                              srcset="
-                                                images/collections/SS24/Final Look/Final_Look_Small.jpg 480w,
-                                                images/collections/SS24/Final Look/Final_Look_Medium.jpg 800w,
-                                                images/collections/SS24/Final Look/Final_Look_Large.jpg 1200w"
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_small.jpg 480w,
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_medium.jpg 800w,
+                                                images/collections/SS23/Final Look/D9BC09B0-688A-4A47-B243-24F55E7CF175_large.jpg 1200w"
                                              sizes="(max-width: 768px) 100vw, 50vw"
-                                             alt="SS24 Runway" loading="lazy">
+                                             alt="SS23 Runway" loading="lazy">
+                                        <!-- Overlay -->
                                         <div class="overlay">
                                             <span>Explore Collection</span>
-                                            <div class="title-overlay">SS24 Tales & Tropes</div>
-                                            <div class="description-overlay">Narrative-driven pieces blending classic and contemporary styles.</div>
+                                            <div class="description-overlay">A collection inspired by raw emotions and strength.</div>
                                         </div>
                                     </div>
                                 </a>
-                              
-                            </div>
-                        </li>
-
-                        <!-- Collection Item 4 -->
-                        <li class="carousel-slide">
-                            <div class="collection-item">
-                                <h3><a href="under-construction.html">FW24 Trampled Flowers</a></h3>
-                                <a href="under-construction.html">
-                                    <div class="image-container">
-                                        <img src="images/collections/FW24/Final Look/fw24_trampled_flowers.jpg"
-                                             srcset="
-                                                images/collections/FW24/Final Look/fw24_trampled_flowers_small.jpg 480w,
-                                                images/collections/FW24/Final Look/fw24_trampled_flowers_medium.jpg 800w,
-                                                images/collections/FW24/Final Look/fw24_trampled_flowers_large.jpg 1200w"
-                                             sizes="(max-width: 768px) 100vw, 50vw"
-                                             alt="FW24 Runway" loading="lazy">
-                                        <div class="overlay">
-                                            <span>Explore Collection</span>
-                                            <div class="title-overlay">FW24 Trampled Flowers</div>
-                                            <div class="description-overlay">Narrative-driven pieces blending classic and contemporary styles.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                               
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!-- Navigation Arrows -->
-                <button class="carousel-button carousel-button--left" aria-label="Previous Slide">&#10094;</button>
-                <button class="carousel-button carousel-button--right" aria-label="Next Slide">&#10095;</button>
+                <button class="carousel-button carousel-button--left" aria-label="Previous Slide" aria-controls="carousel-track">&#10094;</button>
+                <button class="carousel-button carousel-button--right" aria-label="Next Slide" aria-controls="carousel-track">&#10095;</button>
                 <!-- Navigation Dots -->
                 <div class="carousel-nav" role="tablist">
                     <button class="carousel-indicator current-slide" role="tab" aria-selected="true" aria-label="Slide 1"></button>
@@ -260,9 +224,16 @@
     <!-- Footer section with copyright -->
     <footer>
         <p>&copy; 2024 Jackson S. Dallas. All rights reserved.</p>
+        <!-- Optional: Additional Footer Links -->
+        <nav aria-label="Footer Navigation">
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
     </footer>
 
     <!-- Link to external JavaScript file for interactivity -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

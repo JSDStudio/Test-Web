@@ -1,0 +1,31 @@
+/* Remove default list styling */
+.footer-links {
+  list-style: none;       /* Removes bullets */
+  padding: 0px 0px 0px 0px;
+  margin: -10px 0px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  font-size: 75%;
+}
+
+/* Style the links */
+.footer-links li a {
+  color: var(--secondary-color);
+  text-decoration: none;          /* Removes underline */
+  font-weight: 100;               /* Optional: Adjusts font weight */
+  transition: color 0.3s ease;    /* Smooth color transition on hover */
+}
+
+/* Hover effects */
+.footer-links li a:hover {
+  color: #7f8b98; /* Change to your desired hover color */
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+      flex-direction: column; /* Stack links vertically on small screens */
+      gap: 10px;             /* Adjust spacing for vertical layout */
+  }
+}

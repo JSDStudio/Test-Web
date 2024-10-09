@@ -9,7 +9,7 @@ const urlsToCache = [
     '/images/collections/ss23-blood-sweat-tears.jpg',
     '/images/collections/fw23-silver-linings.jpg',
     '/images/collections/ss24-tales-tropes.jpg',
-    '/images/collections/fw24-trampled-flowers.jpg',
+    '/images/collections/AW24-trampled-flowers.jpg',
     '/images/projects/project1.jpg',
     '/images/backgrounds/background.jpg',
     '/images/about/profile.jpg',
