@@ -192,6 +192,11 @@ section.visible {
   color: var(--primary-color);
   margin-bottom: 15px;
   margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 #contact h2 {
   text-align: center;
@@ -416,41 +421,99 @@ section.visible {
   opacity: 1;
 }
 
-/* Projects Gallery Styles */
-.projects-gallery {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Main Projects Container Styles */
+.projects-container {
+  display: grid; /* Use grid layout to display multiple projects side by side */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Each project takes equal space */
+  gap: 20px; /* Space between projects */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding);
+  box-sizing: border-box; /* Include padding in overall width calculation */
 }
 
-.project-item {
-  background-color: rgba(250, 250, 250, 0.85);
+/* Individual Project Section Styles */
+.project-section {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#bleach-in-bloom .image-container,
+#adbreak .image-container {
+  height: 400px; /* Increased height for Bleach in Bloom and AdBreak sections */
 }
 
-.project-item img {
-  max-width: 100%;
-  height: auto;
+.project-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-section:hover .overlay {
+  opacity: 1;
+}
+
+.project-section .overlay .title-overlay {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Image Container Styles for Carousel Effect */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Fixed height for consistent image display */
+  overflow: hidden;
   border-radius: 5px;
 }
 
-.project-item h3 {
-  margin-top: 5px;
-  font-weight: 300;
+/* Individual Image within Project Section */
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
-.project-item p {
-  margin-top: 5px;
-  font-size: 0.95rem;
-  font-weight: 300;
+/* Active Image */
+.project-image.active {
+  opacity: 1;
+}
+
+/* Title of Each Project Section */
+.project-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Display projects in one column for smaller screens */
+  }
 }
 
 /* Contact Section Styles */
