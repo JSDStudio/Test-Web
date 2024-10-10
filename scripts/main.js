@@ -178,10 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Set interval for automatic transition
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        setInterval(showNextImage, 5000); // Change image every 3 seconds
     };
 
     // Initialize carousels for each project section
     initializeProjectCarousel('bleach-in-bloom');
-    initializeProjectCarousel('adbreak');
+    initializeProjectCarousel('Starlight');
 });

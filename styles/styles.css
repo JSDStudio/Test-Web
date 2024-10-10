@@ -425,26 +425,26 @@ section.visible {
 .projects-container {
   display: grid; /* Use grid layout to display multiple projects side by side */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Each project takes equal space */
-  gap: 20px; /* Space between projects */
+  gap: 0px; /* Space between projects */
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--padding);
+  padding: 0px;
   box-sizing: border-box; /* Include padding in overall width calculation */
 }
 
 /* Individual Project Section Styles */
 .project-section {
-  padding: 10px;
-  border-radius: 5px;
+  margin-top: 20px;
+  padding: 0px;
+  border-radius: 0px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #bleach-in-bloom .image-container,
-#adbreak .image-container {
-  height: 400px; /* Increased height for Bleach in Bloom and AdBreak sections */
+#Starlight .image-container {
+  height: 400px; /* Increased height for Bleach in Bloom and Starlight sections */
 }
 
 .project-section .overlay {
@@ -481,7 +481,7 @@ section.visible {
   width: 100%;
   height: 300px; /* Fixed height for consistent image display */
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 /* Individual Image within Project Section */
@@ -493,7 +493,7 @@ section.visible {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 2.5s ease-in-out;
 }
 
 /* Active Image */
